@@ -1,0 +1,1635 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+@font-face {
+font-family: 'Nexa';
+src: url("./font/Nexa Bold.otf");
+}
+
+@font-face {
+font-family: 'Nexa-2';
+src: url("./font/Nexa Light.otf");
+}
+
+/* ---- base ---- */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: #FFFFFF;
+  font-family: 'Nexa', sans-serif;
+  translate: none;
+}
+
+html{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html,body{ 
+  width:100%;
+  height: auto;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+}
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+/* ---- particles.js container ---- */
+
+#conteiner-general{
+  width: 100%;
+  height: auto;
+  background: rgb(189,189,189);
+  background: radial-gradient(circle, rgba(189,189,189,1) 0%, rgba(114,114,114,1) 0%, rgba(36,35,35,0.9874824929971989) 41%, rgba(24,23,23,1) 55%);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+
+/*Main*/
+
+
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  background: transparent;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+
+header img{
+  width: 220px; 
+  position: fixed;
+  z-index: 6;
+  top: 2px;
+  left: 70px;
+}
+
+header nav{
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+header nav ul {
+  display: inline-flex;
+}
+
+header nav ul li:nth-child(1){
+  margin-right: 50px
+}
+
+header nav ul li{
+  cursor: pointer
+}
+
+
+header button {
+  position: absolute;
+  padding: 2px 25px;
+  width: auto;
+  border-radius: 20px;
+  right: 85px;
+  border: none;
+  outline: none;
+  background: rgb(250,255,187);
+background: linear-gradient(90deg, rgba(250,255,187,0.9874824929971989) 43%, rgba(253, 196, 11,1) 83%); 
+}
+
+header button a{
+  color: #000;
+  font-size: 1.3rem;
+}
+
+
+
+header nav ul li a{
+  font-size: 1.5rem;
+  transition: all ease 0.8s;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 1;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+         
+}
+
+header nav ul li a::after{
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: " ";
+  display: block;
+  height: 2px;
+  left: 50%;
+  z-index: 1;
+  position: absolute;
+  background: #FFFFFF;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0%;
+
+}
+
+header nav ul li a:hover::after{
+  width: 100%;
+  left: 0 ;
+}
+
+
+.toggle{
+  display: none;
+  width: auto;
+  height: auto;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.toggle div{
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: 5px;
+  margin-top: 2px;
+
+}
+
+
+
+/* COTIZADOR CARROUSEL*/
+
+.carrosel-cotizacion{
+  width: 100vw;
+  height: 30px;
+  margin-top: 50px;
+  background: #000;
+  z-index: 15;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.carrousel{
+    width: 100%; 
+    z-index: 15;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: cambio 45s infinite linear;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+.cotizacion-box{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  min-width: 180px;
+  font-size: 0.8rem;
+  font-family:' Nexa-2', sans-serif;
+}
+
+.cotizacion-box img{
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+  align-items: center;
+  width: 14px;
+  margin-right: 8px;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+
+.separador{
+  color: #fdc40b ;
+  margin: 0 2px;
+
+}
+
+.separador font{
+  color: #fdc40b ;
+}
+
+
+@keyframes cambio {
+  0%{transform: translateX(124%);}
+  100%{
+    transform: translateX(-124%)
+  }
+}
+
+
+
+
+/*MAIN*/
+
+
+
+main{
+  position: relative;
+}
+
+
+
+
+.contador{
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  padding: 0 10%;
+}
+
+
+.title-contador{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+  padding: 10px;
+  width: 100%;
+  height: 50%;
+
+}
+
+.title-contador span{
+   font-size: 3rem;
+  font-family: 'Nexa-2', sans-serif;
+  
+}
+
+.title-contador h1{
+  font-size: 4.3rem;
+  font-family: 'Nexa', sans-serif;
+}
+
+.title-contador h3{
+  font-size: 2.2rem;
+  margin-top: 7px;
+  letter-spacing: 2px;
+  font-family: 'Nexa', sans-serif;
+}
+
+.title-contador h3 a{
+  color: #fdc40b;
+  cursor: pointer;
+}
+
+.title-contador h3 a font{
+  color: #fdc40b;
+}
+
+.contract{
+  font-size: 1.2rem !important;
+  font-family: 'Nexa', sans-serif;
+  text-align: start;
+
+}
+
+/*#ffd653*/
+
+
+.h3-yellow{
+  color: #fdc40b;
+}
+
+.h3-yellow font{
+  color: #fdc40b;
+}
+
+
+
+.cuenta-box{
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.box1{
+  background: transparent;
+}
+
+.box-2-none{
+  display: none !important;
+}
+
+.box2{
+  transition: all .8s ease-in-out;
+  background: transparent;
+  position: absolute;
+  width: 65%;
+  height: 70%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  z-index: 15;
+  background: rgb(189,189,189);
+  background: radial-gradient(circle, rgba(189,189,189,1) 0%, rgba(114,114,114,1) 0%, rgba(36,35,35,0.9874824929971989) 41%, rgba(24,23,23,1) 55%);;
+}
+
+
+
+.box1 h2{
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Nexa', sans-serif;
+}
+
+/* ? ----- Cuenta Regresiva ----- */
+
+
+.box2 div{
+  margin-left: auto;
+  display: inline-flex;
+  margin-right: 5px;
+}
+
+.box2 div i{
+  font-size: 0.8rem;
+  margin-right: 15px;
+  cursor: pointer
+}
+
+.box2  h2{
+  font-size: 2.3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.box2 > h3{
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-left: 16px;
+  letter-spacing: 18px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  color: #fdc40b;
+}
+.box2 > span{
+  margin-top: 45px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0px;
+}
+
+
+
+
+#cuenta {
+  width: 100%;
+  margin: 0 5px;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+}
+
+
+#launch{
+  width: 80%;
+  margin: 0 5px;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#launch:last-child{
+   margin: 0 2px 0 10px !important
+
+}
+
+
+.simply-section{
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto
+}
+
+.simply-section div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto
+}
+
+.simply-amount{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 7rem;
+  min-width: 7rem;
+  max-width: 7rem;
+  margin-left: 0px;
+  margin-bottom: 8px;
+  font-size: 550%;
+  font-weight: bold;
+  font-family: 'Antonio', sans-serif !important;
+  transition: all ease 0.1s;
+}
+
+
+
+.simply-word {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif !important;
+
+}
+
+
+/* ? ---------------------------- */
+
+
+
+/* ? ----- REDES SOCIALES ----- */
+.redes-sociales{
+  margin: 0 0 auto 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.redes-sociales .btn-red-social {
+  display: inline-block;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 10px 50px auto 50px;
+  transition: .3s ease all;
+  cursor: pointer;
+  width: auto;
+}
+
+.redes-sociales .btn-red-social i{
+  transition: all ease 1s
+}
+
+.redes-sociales .btn-red-social i:hover{
+  color: #fff;
+  text-shadow: -7px 8px 2px #cccccc, -3px 5px #666666;
+ 
+}
+/* ABOUT  */
+.about{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 6%;
+  font-family:' Nexa-2', sans-serif
+}
+
+.about > h2{
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.about > div{
+  margin: 0 auto;
+  width: 75%;
+  height: auto;
+  background: transparent;
+  color: #ffff;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.box-about{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+
+}
+
+.about-1{
+  width: 50%;
+  margin-right: 80px;
+
+}
+.about-2{
+  width: auto;
+  font-family:' Nexa-2', sans-serif;
+
+}
+
+.about-box .box-about h4{
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-family:' Nexa-2', sans-serif
+}
+
+.box-about > .line {
+  width: calc(70%/2);
+  height: 3px;
+  background: #E75938;
+}
+
+.details-about2{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin-bottom: 10px;
+ font-family:' Nexa-2', sans-serif
+}
+
+.details-about2 > div{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  font-family:' Nexa-2', sans-serif;
+   margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+
+.details-about2 > div div{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  font-family:' Nexa-2', sans-serif;
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+.details-li{
+  font-family:' Nexa-2', sans-serif;
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+.porcentajes{
+  margin-left: 30px;
+
+}
+
+.porcentajes span{
+    font-family:' Nexa-2', sans-serif;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+.lines-details{
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin-top: 5px ;
+  font-family:' Nexa-2', sans-serif
+}
+
+
+.about-box .box-about p{
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin: 10px 0;
+  font-family:' Nexa-2', sans-serif
+}
+
+
+/* Tokenomics-part2*/
+
+.tokenomics-part2{
+  padding: 30px 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.info-tokeno{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+  max-width: 250px;
+  margin: 10px 10px auto 10px;
+  z-index: 1;
+}
+
+.contenedor-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin-bottom: auto;
+  text-align: start;
+  margin: 0 0 auto 0;
+  z-index: 1;
+  
+}
+
+
+.info-tokeno img{
+  width: 100%;
+  height: 180px;
+  z-index: 1; 
+
+}
+
+.contenedor-info > h4{
+  font-size: 1rem;
+  margin: 8px 0;
+  font-family:' Nexa-2', sans-serif !important;
+  z-index: 1;
+
+}
+
+
+.contenedor-info > .line {
+  width: calc(70%/2);
+  height: 3px;
+  background: #E75938;
+  margin: 5px 0;
+  z-index: 1;
+}
+
+.contenedor-info > p {
+  font-size: 1.1rem;
+  font-weight: 100;
+  margin: 5px 0;
+  z-index: 1;
+  font-family:' Nexa-2', sans-serif !important;
+  padding: 0 10px 0 0
+  
+}
+
+.contenedor-info > p font{
+    font-size: 1rem;
+  margin: 5px 0;
+  font-family:' Nexa-2', sans-serif !important;
+} 
+
+
+
+
+
+
+/* Tokenomics-part2*/
+/* FOOTER */
+
+footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #575656;
+  color: #fff; 
+  z-index: 2;
+  padding: 0.8rem;
+}
+
+footer span{
+  margin-right: auto;
+  color: #dfa209;
+  margin-left: 10px;
+}
+
+footer span font {
+  color: #dfa209;
+}
+
+footer div{
+  margin-right: 10px;
+}
+
+/* TOGGLE PROPS */
+.active{
+  transform: translateY(0%) !important;
+}
+
+
+
+/* //POPUP PROPS */
+
+
+.active-message{
+  display: block;
+  animation: popup 1s linear
+}
+
+
+.message{
+  width: 100%;
+  margin: 0 5px;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+
+.message h3{
+  font-size: 2rem;
+  margin-bottom: 30px;
+  
+  }
+.message a{
+  font-size: 2.5rem;
+  color: #dfa209;
+}
+
+
+.message1{
+  background: transparent;
+}
+
+.message2{
+   background: transparent;
+}
+
+
+/*GOTOP*/
+.go-top-container{
+  position: fixed;
+  bottom: 4rem;
+  right: 1%;
+  width: 5rem;
+  height: 5rem;
+  z-index: -1;
+  transition: all .2s ease-in-out; 
+}
+
+.go-top-button{
+  width: 0rem;
+  height: 0rem;
+  background: #C02425;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F0CB35, #C02425);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F0CB35, #C02425); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.go-top-button i{
+  position: absolute;
+  font-size: 1.7rem;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color:  #FFFFFF;
+  transition: .2s;
+}
+
+.show{
+  z-index: 11;
+}
+
+.show .go-top-button{
+  animation: goup .3s ease;
+  width: 5rem;
+  height: 5rem;
+  z-index: 11;
+}
+
+.show i{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes goup {
+  0%{
+    width: 0rem;
+    height: 0rem;
+  }
+  50%{
+    width: 7rem;
+    height: 7rem;
+  }
+  100%{
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (max-width: 1030px){
+
+      header img{
+      width: 108px; 
+      left: 
+    }
+
+    html{
+      font-size: 15px
+    }
+  
+    .toggle{
+    display: block;
+    margin-left: auto;
+    }
+  
+  
+    .nav-ul{
+    width: 100vw;
+    height: 100px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    margin: 0;
+    transform: translateY(-120%);
+    background-color: #ca9b02; 
+    transition: all ease 1s;
+    }
+  
+    .nav-ul > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  
+    }
+  
+    header nav ul > li{
+    cursor: pointer;
+    z-index: 7
+    }
+
+   header nav ul li a{
+    cursor: pointer;
+    z-index: 11
+    }
+  
+    header nav ul li:nth-child(1){
+    margin-right: 8px;
+    margin-bottom: 8px;
+      }
+  
+  .contador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5%;
+  }
+  
+  .title-contador{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  .contract{
+  font-size: 0.65rem !important;
+  font-family: 'Nexa', sans-serif;
+
+}
+
+  
+    .cuenta-box{
+      width: 80%;
+      height: 50%;
+      padding: 10px;
+  
+  }
+  
+    .simply-amount {
+      width: 100%;
+      min-width: 6rem;
+      max-width: 5.8rem;
+      height: 7.2rem;
+      max-height: 7.2rem;
+      font-size: 400%;
+      margin-left: 0px;
+    }
+    
+    
+    .simply-word {
+     font-size: 1rem;
+    
+    
+    }
+  
+    .about{
+      height: auto;
+    }
+  
+    .about .about-box{
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .box-about{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+  
+    }
+    .about-1{
+      margin: 0;
+      width: 80%
+    }
+  
+    .about-2{
+      margin: 0;
+      width: 80%
+    }
+  
+    .tokenomics-part2{
+    margin: 30px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 12;
+  }
+  
+  .info-tokeno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    width: 90%;
+    margin: 10px  40px; 
+  }
+  
+  .contenedor-info > h4{
+    font-size: 1rem;
+    margin: 5px 0;
+    font-family:' Nexa-2', sans-serif !important;
+  
+  }
+  
+  .info-tokeno img{
+    width: 100%;
+  
+  }
+  
+  .contenedor-info > .line {
+    width: calc(70%/2);
+    height: 3px;
+    background: #E75938;
+    margin: 5px 0;
+  }
+  
+  .contenedor-info > p {
+    font-size: 1rem;
+    margin: 5px 0;
+    font-family:' Nexa-2', sans-serif !important;
+    
+  }
+  
+  .contenedor-info > p font{
+      font-size: 1rem;
+    margin: 5px 0;
+    font-family:' Nexa-2', sans-serif !important;
+  } 
+
+
+
+}
+
+
+@media screen and (max-width: 780px){
+
+      header img{
+      width: 108px; 
+      left: 
+    }
+
+    html{
+      font-size: 15px
+    }
+  
+    .toggle{
+    display: block;
+    margin-left: auto;
+    }
+  
+  
+    .nav-ul{
+    width: 100vw;
+    height: 100px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    margin: 0;
+    transform: translateY(-120%);
+    background-color: #ca9b02; 
+    transition: all ease 1s;
+    }
+  
+    .nav-ul > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  
+    }
+  
+    header nav ul > li{
+    cursor: pointer;
+    z-index: 7
+    }
+
+   header nav ul li a{
+    cursor: pointer;
+    z-index: 11
+    }
+  
+    header nav ul li:nth-child(1){
+    margin-right: 8px;
+    margin-bottom: 8px;
+      }
+  
+  .contador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10px;
+  }
+  
+  .title-contador{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  .contract{
+  font-size: 0.65rem !important;
+  font-family: 'Nexa', sans-serif;
+    text-align: center;
+}
+
+  
+    .cuenta-box{
+      width: 80%;
+      height: 50%;
+      padding: 10px;
+  
+  }
+  
+    .simply-amount {
+      width: 100%;
+      min-width: 6rem;
+      max-width: 5.8rem;
+      height: 7.2rem;
+      max-height: 7.2rem;
+      font-size: 400%;
+      margin-left: 0px;
+    }
+    
+    
+    .simply-word {
+     font-size: 1rem;
+    
+    
+    }
+  
+    .about{
+      height: auto;
+    }
+  
+    .about .about-box{
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .box-about{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+  
+    }
+    .about-1{
+      margin: 0;
+      width: 80%
+    }
+  
+    .about-2{
+      margin: 0;
+      width: 80%
+    }
+  
+    .tokenomics-part2{
+    margin: 30px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 12;
+  }
+  
+  .info-tokeno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    width: 90%;
+    margin: 10px  40px; 
+  }
+  
+  .contenedor-info > h4{
+    font-size: 1rem;
+    margin: 5px 0;
+    font-family:' Nexa-2', sans-serif !important;
+  
+  }
+  
+  .info-tokeno img{
+    width: 100%;
+  
+  }
+  
+  .contenedor-info > .line {
+    width: calc(70%/2);
+    height: 3px;
+    background: #E75938;
+    margin: 5px 0;
+  }
+  
+  .contenedor-info > p {
+    font-size: 1rem;
+    margin: 5px 0;
+    font-family:' Nexa-2', sans-serif !important;
+    
+  }
+  
+  .contenedor-info > p font{
+      font-size: 1rem;
+    margin: 5px 0;
+    font-family:' Nexa-2', sans-serif !important;
+  } 
+
+  @keyframes cambio {
+  0%{transform: translateX(250%);}
+  100%{
+    transform: translateX(-250%)
+  }
+
+
+}
+
+@media screen and (max-width: 550px){
+
+.simply-amount {
+  font-size: 380%;
+  width: 4.5rem;
+  min-width: 4.5rem;
+  max-width: 4.5rem;
+  height: 7rem;
+  max-height: 7rem;
+}
+
+header button {
+  position: absolute;
+  padding: 2px 25px;
+  width: auto;
+  border-radius: 20px;
+  right: 80px;
+}
+
+header button a{
+  color: #000;
+  font-size: 1rem;
+}
+
+
+  .about div p{
+    font-size: 0.96rem ;
+  
+  }
+
+  .tokenomics-part2{
+    margin: 30px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 12;
+  }
+  
+  .info-tokeno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    width: 90%;
+    margin: 10px  40px; 
+  }
+  
+  .contenedor-info > h4{
+    font-size: 1rem;
+    margin: 5px 0;
+    font-family:' Nexa-2', sans-serif !important;
+  
+  }
+  
+  .info-tokeno img{
+    width: 90%;
+  
+  }
+  
+  .contenedor-info > .line {
+    width: calc(70%/2);
+    height: 3px;
+    background: #E75938;
+    margin: 5px 0;
+  }
+  
+  .contenedor-info > p {
+    font-size: 1rem;
+    margin: 5px 0;
+    font-family:' Nexa-2', sans-serif !important;
+    
+  }
+  
+  .contenedor-info > p font{
+      font-size: 1rem;
+    margin: 5px 0;
+    font-family:' Nexa-2', sans-serif !important;
+  }
+
+}
+  
+@media screen and (max-width: 480px){
+
+  html{
+    font-size: 14px
+}
+
+header img{
+  width: 105px;
+  left: 20px 
+}
+
+.cuenta-box{
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#cuenta {
+  width: 100%;
+}
+
+.title-contador h1{
+  font-size: 3.5rem;
+}
+
+.title-contador h3{
+  font-size: 1.8rem;
+}
+
+.simply-section {
+  margin: 0 5px;
+}
+
+.simply-amount {
+  font-size: 350%;
+  margin-right: 0px;
+  width: 5rem;
+  min-width: 5rem;
+  max-width: 5rem;
+  height: 7rem;
+  max-height: 7rem;
+}
+
+
+
+.simply-word {
+ font-size: 1rem;
+
+
+}
+
+.about-box .box-about h4{
+  font-size: 1rem
+}
+
+
+.details-about2 > div{
+font-size: 1rem
+}
+
+
+.details-about2 > div div{
+ font-size: 1rem
+}
+
+.details-li{
+  font-size: 1rem
+}
+.porcentajes{
+  margin-left: 30px;
+
+}
+
+.porcentajes span{
+font-size: 1rem
+}
+
+.lines-details{
+  font-size: 1rem
+}
+
+
+.about-box .box-about p{
+  font-size: 1rem
+}
+
+.cotizacion-box{
+  width: 150px;
+  min-width: 150px;
+  font-size: 0.7rem;
+  font-family:' Nexa-2', sans-serif;
+}
+
+}
+
+@media screen and (max-width: 380px){
+
+
+.cuenta-box{
+  width: 90%;
+  height: 50%;
+}
+
+.simply-amount {
+  font-size: 320%;
+  margin-right: 0px;
+  width: 4.8rem;
+  min-width: 4.8rem;
+  max-width: 4.8rem;
+}
+
+.title-contador h1{
+  font-size: 3rem;
+}
+
+.title-contador h3{
+  font-size: 1.2rem;
+}
+
+header button {
+  position: absolute;
+  padding: 2px 20px;
+  width: auto;
+  border-radius: 20px;
+  right: 60px;
+}
+
+header button a{
+  color: #000;
+  font-size: 1rem;
+}
+
+
+.about div{
+  width: 90%;
+  height: 60%;
+
+}
+
+.about div p{
+  font-size: 0.8rem
+
+}
+
+  @keyframes cambio {
+  0%{transform: translateX(410%);}
+  100%{
+    transform: translateX(-410%)
+  }
+
+}
+
+}
+
+
+@media screen and (max-width: 340px){
+
+.cuenta-box{
+  width: 95%;
+  height: 50%;
+}
+
+
+.simply-amount {
+  font-size: 350%;
+  width: 4.4rem;
+  min-width: 4.4rem;
+  max-width: 4.4rem;
+}
+
+.about div{
+  width: 90%;
+  height: 70%;
+}
+
+.about div p{
+  font-size: 0.65rem
+}
+
+.go-top-container{
+  bottom: 0rem;
+ 
+}
+
+  @keyframes cambio {
+  0%{transform: translateX(480%);}
+  100%{
+    transform: translateX(-480%)
+  }
+
+}
+
+
+
